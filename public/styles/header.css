@@ -2,55 +2,72 @@ header {
     background-color: #fff;
     box-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
     border-radius: 0px 0px 32px 32px;
-    padding: 10px;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
+    margin: 0;
 }
 
-.navbar ul {
+.header-hidden {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+header:hover {
+    opacity: 1
+}
+
+.navbar {
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
+    width: 100%;
 }
 
-.navbar ul li {
-    margin: 0 15px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0px 40px;
+    height: 32px;
 }
 
-.navbar ul li a img {
+.header-logo {
+    flex: 1;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+}
+
+.header-account {
+    flex: 1;
+    text-align: right;
+}
+
+.header-content a,
+.header-account a {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin: 0 10px;
+}
+
+.header-content a:hover,
+.header-account a:hover {
+    transition: all ease-in-out 0.2s;
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.header-content a img,
+.header-account a img {
     width: 24px;
     height: 24px;
 }
 
-/* Estilos gerais do header */
-.header {
-    display: flex; /* Usando flexbox */
-    justify-content: space-between; /* Espaço entre os elementos */
-    align-items: center; /* Alinhamento vertical */
-    padding: 10px 20px; /* Espaçamento interno */
-}
-
-/* Logo do header */
-.header-logo {
-    flex: 1; /* Flexível para ocupar espaço */
-}
-
-/* Conteúdo do header */
-.header-content {
-    display: flex; /* Flexbox para alinhamento dos itens */
-    flex: 2; /* Para ocupar mais espaço */
-    justify-content: space-evenly;
-}
-
-
-/* Conta do header */
-.header-acccount {
-    flex: 1; /* Flexível para ocupar espaço */
-    text-align: right; /* Alinhamento à direita */
-}
-
-.last {
-    margin: 0px 32px;
+.links {
+    transition: all ease-in-out 0.2s;
 }

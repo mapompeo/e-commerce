@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta | Look Gear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles/config.css">
+    <link rel="stylesheet" href="/public/styles/conta.css">
+    <script src="/public/js/conta.js" defer></script>
+</head>
+
+<body>
+    <a class="voltar" href="/public/index.html"><img src="/public/images/conta/voltar.svg" alt="Voltar"></a>
+    <section class="conta">
+        <div class="container-entrar">
+            <div class="entrar">
+                <h2>Entrar</h2>
+                <div class="inputs">
+                    <label for="entrar-email">Email</label>
+                    <input type="email" id="entrar-email" placeholder="email@email.com">
+                </div>
+                <div class="inputs">
+                    <label for="entrar-senha">Senha</label>
+                    <input type="password" id="entrar-senha" placeholder="senha123">
+                </div>
+                <button class="entrar-botao" onclick="mostrarEntrar()">Entrar</button>
+                <p>Não tem uma conta? <a href="javascript:void(0);" onclick="mostrarCadastrar()">Criar conta</a></p>
+            </div>
+        </div>
+        <div class="container-cadastrar">
+            <div class="cadastrar">
+                <h2>Cadastrar-se</h2>
+                <div class="esquerda-direita">
+                    <div class="esquerda">
+                        <h3>Seus dados</h3>
+                        <div class="inputs">
+                            <label for="cadastrar-cpf">CPF</label>
+                            <input type="number" id="cadastrar-cpf" placeholder="123.456.789-10">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-email">Email</label>
+                            <input type="email" id="cadastrar-email" placeholder="email@email.com">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-nome">Nome</label>
+                            <input type="text" id="cadastrar-nome" placeholder="Seu nome">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-sobrenome">Sobrenome</label>
+                            <input type="text" id="cadastrar-sobrenome" placeholder="Seu sobrenome">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-telefone">Telefone</label>
+                            <input type="tel" id="cadastrar-telefone" placeholder="(12) 34567-8910">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-senha">Senha</label>
+                            <input type="password" id="cadastrar-senha" placeholder="Senha123">
+                        </div>
+                    </div>
+                    <div class="direita">
+                        <h3>Seu endereço</h3>
+                        <div class="inputs">
+                            <label for="cadastrar-cep">CEP</label>
+                            <input type="number" id="cadastrar-cep" placeholder="12345-678">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-estado">UF</label>
+                            <input type="text" id="cadastrar-estado" placeholder="Estado">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-cidade">Cidade</label>
+                            <input type="text" id="cadastrar-cidade" placeholder="Sua cidade">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-bairro">Bairro</label>
+                            <input type="text" id="cadastrar-bairro" placeholder="Seu bairro">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-logradouro">Logradouro</label>
+                            <input type="text" id="cadastrar-logradouro" placeholder="Seu logradouro">
+                        </div>
+                        <div class="inputs">
+                            <label for="cadastrar-complemento">Complemento</label>
+                            <input type="text" id="cadastrar-complemento" placeholder="Seu complemento">
+                        </div>
+                    </div>
+                </div>
+                <button class="cadastrar-botao" onclick="mostrarCadastrar()">Cadastrar</button>
+                <p>Já tem uma conta? <a href="javascript:void(0);" onclick="mostrarEntrar()">Entrar</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -6,8 +6,8 @@
     --background-ligth: #F5F5F7;
     --background-dark: #111111;
     --background-card-light: #FFFFFF;
-    
-    --color: #309BE2;
+
+    --color: #72BCEE;
     --font-color: #1F1F1F;
     --drop-shadow-color: rgba(0, 0, 0, 0.25);
 }
@@ -27,4 +27,8 @@
 
 a {
     text-decoration: none;
+}
+
+body {
+    background-color: var(--background-ligth);
 }

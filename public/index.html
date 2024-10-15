@@ -16,44 +16,46 @@
     <link rel="stylesheet" href="styles/carrossel.css">
     <link rel="stylesheet" href="styles/header.css">
     <script src="js/carrossel.js" defer></script>
+    <script src="js/header.js" defer></script>
 </head>
 
 <body>
-
     <header>
         <nav class="navbar">
-            <ul class="header">
-                <div class="header-logo last">
-                    <a href="index.html"><img src="images/header/logo.svg" alt="Conta"></a>
+            <div class="header">
+                <div class="header-logo links">
+                    <a href="index.html"><img src="images/header/logo.svg" alt="Logo"></a>
                 </div>
-                <div class="header-content">
-                    <li><a href="index.html"><img src="images/header/home.svg" alt="Home"></a></li>
-                    <li><a href="pages/produtos.html"><img src="images/header/produtos.svg" alt="Produtos"></a></li>
-                    <li><a href="pages/carrinho.html"><img src="images/header/carrinho.svg" alt="Carrinho"></a></li>
+                <div class="header-content links">
+                    <a href="index.html" aria-label="Home"><img src="images/header/home.svg" alt="Home"></a>
+                    <a href="pages/produtos.html" aria-label="Produtos"><img src="images/header/produtos.svg"
+                            alt="Produtos"></a>
+                    <a href="pages/carrinho.html" aria-label="Carrinho"><img src="images/header/carrinho.svg"
+                            alt="Carrinho"></a>
                 </div>
-                <div class="header-acccount last">
-                    <a href="pages/conta.html"><img src="images/header/conta.svg" alt="Conta"></a>
+                <div class="header-account links">
+                    <a href="pages/conta.html" aria-label="Conta"><img src="images/header/conta.svg" alt="Conta"></a>
                 </div>
-            </ul>
+            </div>
         </nav>
     </header>
-
     <!-- Banner -->
     <section class="banner">
         <img src="banner-promocao.jpg" alt="Mega Ofertas">
     </section>
-
     <!-- Seção Mais Vendidos -->
     <section class="mais-vendidos">
-        <h2>Mais vendidos</h2>
+        <div class="mais-vendidos-titulo">
+            <h2>Mais vendidos</h2>
+        </div>
         <div class="carrosel">
-            <button class="prev-btn">‹</button>
+            <button class="prev-btn"><img src="images/carrossel/seta-esquerda.svg" alt="Seta"></button>
             <div class="produtos-container">
                 <div class="produtos">
                     <a href="#">
                         <div class="produto-card">
-                            <div class="produto-card-image"><img src="images/products/apple-watch.png" alt="Apple Watch">
-                            </div>
+                            <div class="produto-card-image"><img src="images/products/apple-watch.png"
+                                    alt="Apple Watch"></div>
                             <div class="produtos-card-text">
                                 <h3>Apple Watch (usado)</h3>
                                 <h2>Aparelho em ótimas condições</h2>
@@ -63,7 +65,8 @@
                     </a>
                     <a href="#">
                         <div class="produto-card">
-                            <div class="produto-card-image"><img src="images/products/iphone-13.png" alt="iPhone 13"></div>
+                            <div class="produto-card-image"><img src="images/products/iphone-13.png" alt="iPhone 13">
+                            </div>
                             <div class="produtos-card-text">
                                 <h3>iPhone 13 (usado)</h3>
                                 <h2>Aparelho em ótimas condições de uso.</h2>
@@ -73,8 +76,8 @@
                     </a>
                     <a href="#">
                         <div class="produto-card">
-                            <div class="produto-card-image"><img src="images/products/magsafe.png" alt="Carregador MagSafe">
-                            </div>
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
                             <div class="produtos-card-text">
                                 <h3>Carregador MagSafe</h3>
                                 <h2>Aparelho em ótimas condições de uso.</h2>
@@ -84,8 +87,8 @@
                     </a>
                     <a href="#">
                         <div class="produto-card">
-                            <div class="produto-card-image"><img src="images/products/magsafe.png" alt="Carregador MagSafe">
-                            </div>
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
                             <div class="produtos-card-text">
                                 <h3>Carregador MagSafe</h3>
                                 <h2>Aparelho em ótimas condições de uso.</h2>
@@ -95,8 +98,19 @@
                     </a>
                     <a href="#">
                         <div class="produto-card">
-                            <div class="produto-card-image"><img src="images/products/magsafe.png" alt="Carregador MagSafe">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
+                            <div class="produtos-card-text">
+                                <h3>Carregador MagSafe</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$ 299,00</p>
                             </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
                             <div class="produtos-card-text">
                                 <h3>Carregador MagSafe</h3>
                                 <h2>Aparelho em ótimas condições de uso.</h2>
@@ -106,7 +120,165 @@
                     </a>
                 </div>
             </div>
-            <button class="next-btn">›</button>
+            <button class="next-btn"><img src="images/carrossel/seta-direita.svg" alt="Seta"></button>
+        </div>
+    </section>
+    <section class="mais-vendidos">
+        <div class="mais-vendidos-titulo">
+            <h2>Mais vendidos</h2>
+        </div>
+        <div class="carrosel">
+            <button class="prev-btn"><img src="images/carrossel/seta-esquerda.svg" alt="Seta"></button>
+            <div class="produtos-container">
+                <div class="produtos">
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/apple-watch.png"
+                                    alt="Apple Watch"></div>
+                            <div class="produtos-card-text">
+                                <h3>Apple Watch (usado)</h3>
+                                <h2>Aparelho em ótimas condições</h2>
+                                <p>R$1.499,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/iphone-13.png" alt="iPhone 13">
+                            </div>
+                            <div class="produtos-card-text">
+                                <h3>iPhone 13 (usado)</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$4.999,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
+                            <div class="produtos-card-text">
+                                <h3>Carregador MagSafe</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$ 299,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
+                            <div class="produtos-card-text">
+                                <h3>Carregador MagSafe</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$ 299,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
+                            <div class="produtos-card-text">
+                                <h3>Carregador MagSafe</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$ 299,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
+                            <div class="produtos-card-text">
+                                <h3>Carregador MagSafe</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$ 299,00</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="next-btn"><img src="images/carrossel/seta-direita.svg" alt="Seta"></button>
+        </div>
+    </section>
+    <section class="mais-vendidos">
+        <div class="mais-vendidos-titulo">
+            <h2>Mais vendidos</h2>
+        </div>
+        <div class="carrosel">
+            <button class="prev-btn"><img src="images/carrossel/seta-esquerda.svg" alt="Seta"></button>
+            <div class="produtos-container">
+                <div class="produtos">
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/apple-watch.png"
+                                    alt="Apple Watch"></div>
+                            <div class="produtos-card-text">
+                                <h3>Apple Watch (usado)</h3>
+                                <h2>Aparelho em ótimas condições</h2>
+                                <p>R$1.499,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/iphone-13.png" alt="iPhone 13">
+                            </div>
+                            <div class="produtos-card-text">
+                                <h3>iPhone 13 (usado)</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$4.999,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
+                            <div class="produtos-card-text">
+                                <h3>Carregador MagSafe</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$ 299,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
+                            <div class="produtos-card-text">
+                                <h3>Carregador MagSafe</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$ 299,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
+                            <div class="produtos-card-text">
+                                <h3>Carregador MagSafe</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$ 299,00</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="produto-card">
+                            <div class="produto-card-image"><img src="images/products/magsafe.png"
+                                    alt="Carregador MagSafe"></div>
+                            <div class="produtos-card-text">
+                                <h3>Carregador MagSafe</h3>
+                                <h2>Aparelho em ótimas condições de uso.</h2>
+                                <p>R$ 299,00</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="next-btn"><img src="images/carrossel/seta-direita.svg" alt="Seta"></button>
         </div>
     </section>
 </body>
