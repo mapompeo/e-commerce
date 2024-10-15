@@ -1,0 +1,89 @@
+.carrosel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: max-content;
+    margin: 0 auto;
+    overflow: hidden;  /* Para limitar a visualização dos produtos dentro da área visível */
+}
+
+.produtos-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.produtos {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: max-content; /* Ajuste dinâmico para produtos */
+}
+
+/* Desfoque nas laterais do carrossel */
+.produtos-container::before,
+.produtos-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 120px;  /* Largura das áreas desfocadas */
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.produtos-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.produtos-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgb(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+/* Estilização básica dos produtos */
+.produto-card {
+    min-width: 300px;
+    height: auto;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease;
+    opacity: 1;
+}
+
+/* Botões do carrossel */
+.prev-btn, .next-btn {
+    transition: all ease-in-out 0.2s;
+    background-color: #333;
+    border-radius: 99px;
+    width: 48px;
+    height: 48px;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    z-index: 10; /* Certifica que os botões fiquem sobre os produtos */
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: rgba(51, 51, 51, 0.8);
+    transform: scale(1.1);
+}
+
+
+
+

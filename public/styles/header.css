@@ -1,12 +1,56 @@
-.header {
-    justify-content: space-between;
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 0px 0px 32px 32px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.header-links {
-    box-shadow: 4px 4px 20px var(--drop-shadow-color);
-    width: 300px;
-    margin-top: 0;
-    height: 100%;
-    border: solid 1px black;
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Estilos gerais do header */
+.header {
+    display: flex; /* Usando flexbox */
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* Alinhamento vertical */
+    padding: 10px 20px; /* Espaçamento interno */
+}
+
+/* Logo do header */
+.header-logo {
+    flex: 1; /* Flexível para ocupar espaço */
+}
+
+/* Conteúdo do header */
+.header-content {
+    display: flex; /* Flexbox para alinhamento dos itens */
+    flex: 2; /* Para ocupar mais espaço */
     justify-content: space-evenly;
+}
+
+
+/* Conta do header */
+.header-acccount {
+    flex: 1; /* Flexível para ocupar espaço */
+    text-align: right; /* Alinhamento à direita */
+}
+
+.last {
+    margin: 0px 32px;
 }
