@@ -10,15 +10,6 @@ header {
     margin: 0;
 }
 
-.header-hidden {
-    opacity: 0.5;
-    transition: opacity 0.3s ease-in-out;
-}
-
-header:hover {
-    opacity: 1
-}
-
 .navbar {
     display: flex;
     justify-content: center;
