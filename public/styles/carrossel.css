@@ -26,7 +26,7 @@
     content: "";
     position: absolute;
     top: 0;
-    width: 500px;  
+    width: 500px;
     height: 100%;
     z-index: 5;
     pointer-events: none;
@@ -52,7 +52,8 @@
 
 }
 
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
     transition: all ease-in-out 0.2s;
     background-color: transparent;
     border-radius: 99px;
@@ -72,7 +73,8 @@
     right: 30px;
 }
 
-.prev-btn:hover, .next-btn:hover {
+.prev-btn:hover,
+.next-btn:hover {
     transition: all ease-in-out 0.2s;
     transform: scale(1.1);
 }
