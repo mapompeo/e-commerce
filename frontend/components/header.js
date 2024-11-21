@@ -10,7 +10,7 @@ header.innerHTML = `
             <a href="index.html" aria-label="Home"><img src="images/header/home.svg" alt="Home"></a>
             <a href="pages/produtos.html" aria-label="Produtos"><img src="images/header/produtos.svg"
                     alt="Produtos"></a>
-            <a href="pages/carrinho.html" aria-label="Carrinho"><img src="images/header/carrinho.svg"
+            <a id="openCart" class="cart-button" aria-label="Carrinho"><img src="images/header/carrinho.svg"
                     alt="Carrinho"></a>
         </div>
         <div class="header-account links">
@@ -20,5 +20,3 @@ header.innerHTML = `
 </nav>
 
 `
-
-//começo do cpf do jose 13989

@@ -48,6 +48,7 @@ body {
 
 .entrar-botao,
 .cadastrar-botao {
+    transition: all ease-in-out 0.2s;
     width: 300px;
     height: 40px;
     background-color: var(--color);
@@ -56,6 +57,13 @@ body {
     color: white;
     border-radius: 8px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.entrar-botao:hover,
+.cadastrar-botao:hover {
+    transition: all ease-in-out 0.2s;
+    background-color: #72bcee8a;
+    cursor: pointer;
 }
 
 .inputs {

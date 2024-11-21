@@ -1,0 +1,136 @@
+/* Reset básico */
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: white;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 32px 32px 0px 0px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 25%;
+    text-align: center;
+}
+
+.placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.placeholder img {
+    width: auto;
+    height: 100px;
+}
+
+.footer-content {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    margin: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content a img {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-content a:hover {
+    color: #4a90e2;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-content-margin a {
+    transition: all ease-in-out 0.2s;
+}
+
+.footer-content-margin a img {
+    height: 36px;
+    width: 36px;
+}
+
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #777;
+}
+
+.footer-content-margin a:hover {
+    transition: all ease-in-out 0.2s;
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer-content {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .footer-content a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content a {
+        font-size: 14px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content a img {
+        margin: 0 0 5px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+}

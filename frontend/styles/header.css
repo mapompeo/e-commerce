@@ -16,6 +16,10 @@ header {
     width: 100%;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -26,6 +30,7 @@ header {
 }
 
 .header-logo {
+    margin-top: 16px;
     flex: 1;
 }
 
