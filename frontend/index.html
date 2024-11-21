@@ -17,14 +17,13 @@
     <link rel="stylesheet" href="styles/produto.css">
     <link rel="stylesheet" href="styles/carrossel.css">
     <link rel="stylesheet" href="styles/header.css">
-    <script src="js/carrossel.js" defer></script>
+    <script src="./js/carrossel.js" defer></script>
     <script src="./components/cart.js" defer></script>
 </head>
 
 <body>
     <header>
         <script src="./components/header.js"></script>
-
     </header>
     <section class="banner">
         <img src="images/home/bannerjpg.jpg" alt="Banner">
@@ -33,15 +32,6 @@
         <div class="mais-vendidos-titulo">
             <h2>Mais vendidos</h2>
         </div>
-
-
-
-
-
-
-
-
-
         <div class="carrosel">
             <button class="prev-btn"><img src="images/carrossel/seta-esquerda.svg" alt="Seta"></button>
             <div class="produtos-container">
@@ -196,20 +186,13 @@
             <button class="next-btn"><img src="images/carrossel/seta-direita.svg" alt="Seta"></button>
         </div>
     </section>
-
-
-
-
-
     <footer>
         <script src="./components/footer.js"></script>
     </footer>
-
     <script type="module">
         import { renderCart } from './components/cart.js'
         renderCart()
     </script>
-
 </body>
 
 </html>
