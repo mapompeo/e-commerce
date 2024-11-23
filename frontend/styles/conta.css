@@ -121,3 +121,21 @@ body {
 .container-cadastrar {
     display: none;
 }
+
+.mensagem-oculta {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mensagem-visivel {
+    display: block;
+    opacity: 1;
+    background-color: #B3DBF6;
+    color: #828c92;
+    padding: 10px;
+    border: 1px solid #a3d9fd;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}

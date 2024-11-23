@@ -9,13 +9,13 @@ section {
     margin-top: -62px;
 }
 
-.mais-vendidos-titulo {
+.topico-titulo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.mais-vendidos-titulo h2 {
+.topico-titulo h2 {
     border-bottom: solid 3px var(--color);
     width: fit-content;
     text-align: center;
@@ -24,6 +24,6 @@ section {
     margin: 20px;
 }
 
-.mais-vendidos {
+.topico {
     padding: 0px;
 }

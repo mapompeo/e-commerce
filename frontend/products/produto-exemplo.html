@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | Look Gear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/config.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/cart.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/product.css">
+</head>
+
+<body>
+    <header>
+        <script src="../components/header.js" type="module"></script>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="product-image">
+                <img src="" alt="Produto" id="product-image">
+            </div>
+            <div class="product-info">
+                <h1 class="product-title" id="product-name"></h1>
+                <p class="price" id="product-price"></p>
+                <p class="description" id="product-description"></p>
+                <div class="product-actions">
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button class="btn-add-cart" id="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="shipping-info">
+                    <p><strong>Frete:</strong> Grátis para compras acima de R$ 1.500,00</p>
+                </div>
+                <div class="discount-info">
+                    <p><strong>Desconto:</strong> 5% de desconto para pagamento à vista!</p>
+                </div>
+                <div class="additional-info">
+                    <h3>Detalhes Técnicos:</h3>
+                    <ul>
+                        <li>Cor: Branco</li>
+                        <li>Conexão: Bluetooth</li>
+                        <li>Autonomia: 5 horas de reprodução contínua</li>
+                        <li>Condicionamento: Usado, em ótimo estado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <script src="../components/footer.js"></script>
+    </footer>
+
+    <!-- Agora as importações estão feitas como módulos -->
+    <script type="module">
+        import { produtos } from "../js/products.js"; // Importando os produtos
+        import { addToCart } from "../components/cart.js"; // Importando função do cart.js
+
+        const productId = 1; // ID do produto, este valor pode ser alterado conforme necessário
+        const product = produtos.find(prod => prod.id === productId);
+
+        if (product) {
+            // Atualiza as informações do produto na página
+            document.getElementById("product-name").textContent = product.nome;
+            document.getElementById("product-price").textContent = `R$ ${product.preco.toFixed(2)}`;
+            document.getElementById("product-description").textContent = product.descricao;
+            document.getElementById("product-image").src = product.imagem;
+        }
+
+        // Adiciona o produto ao carrinho
+        document.getElementById("add-to-cart").addEventListener("click", () => {
+            const quantity = parseInt(document.getElementById("quantity").value);
+            addToCart(product.id, product.nome, product.preco, quantity);  // Adiciona ao carrinho
+        });
+    </script>
+</body>
+
+</html>
