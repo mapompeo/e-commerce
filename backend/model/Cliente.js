@@ -58,6 +58,10 @@ const Cliente = db.define('cliente', {
     statusCliente: {
         type: DataTypes.STRING(20),
         allowNull: false
+    },
+    senhaCliente: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
 }, {
     tableName: 'clientes',

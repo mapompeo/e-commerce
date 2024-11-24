@@ -1,4 +1,3 @@
-// Função para renderizar o carrinho na página
 function renderCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || []; // Recupera o carrinho
 
@@ -19,13 +18,13 @@ function renderCart() {
                         <tr>
                             <td>${item.productName}</td>
                             <td>${item.quantity}</td>
-                            <td>R$${(item.productPrice * item.quantity).toFixed(2)}</td>
+                            <td>${item.productPriceText}</td> <!-- Aqui usamos o texto formatado -->
                         </tr>
                     `).join('')}
                     <tr class="total">
                         <td>Total</td>
                         <td>${cart.reduce((total, item) => total + item.quantity, 0)}</td>
-                        <td>R$${cart.reduce((total, item) => total + item.productPrice * item.quantity, 0).toFixed(2)}</td>
+                        <td>R$${cart.reduce((total, item) => total + item.productPrice * item.quantity, 0).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td> <!-- Calculando o total com o preço numérico -->
                     </tr>
                 </tbody>
             </table>

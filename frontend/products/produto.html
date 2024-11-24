@@ -55,13 +55,53 @@
     </script>
 
     <script>
-        // Recupera o ID salvo no localStorage e atualiza o data-id do body
+        // Recupera o ID do produto selecionado
         const productId = localStorage.getItem('selectedProductId');
         if (productId) {
             document.body.setAttribute('data-id', productId);
         } else {
             console.error("ID do produto não encontrado no localStorage!");
         }
+
+        // Função para adicionar o produto ao carrinho
+        // Função para adicionar o produto ao carrinho
+        // Função para adicionar o produto ao carrinho
+        const addToCartButton = document.getElementById("add-to-cart");
+        const quantityInput = document.getElementById("quantity");
+
+        addToCartButton.addEventListener("click", () => {
+            const productId = document.body.getAttribute('data-id');
+            const productName = document.getElementById("product-name").textContent;
+            const productPriceText = document.getElementById("product-price").textContent;
+            const productPrice = parseFloat(productPriceText.replace("R$", "").replace(".", "").replace(",", ".").trim()); // Converte para número decimal
+            const quantity = parseInt(quantityInput.value);
+
+            if (!productId || !productName || isNaN(productPrice) || !quantity) {
+                alert("Por favor, preencha todos os campos do produto.");
+                return;
+            }
+
+            // Adiciona o produto ao carrinho no localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.productId === productId);
+
+            if (existingItemIndex >= 0) {
+                cart[existingItemIndex].quantity += quantity; // Se já existir, soma a quantidade
+            } else {
+                cart.push({
+                    productId,
+                    productName,
+                    productPrice,  // Aqui armazenamos como decimal
+                    productPriceText, // Aqui mantemos o valor formatado para exibição
+                    quantity
+                });
+            }
+
+            // Salva o carrinho de volta no localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert("Produto adicionado ao carrinho!");
+        });
+
     </script>
 </body>
 
