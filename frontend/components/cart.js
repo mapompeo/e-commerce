@@ -1,22 +1,3 @@
-// cart.js - Manipulação do carrinho
-// Função para adicionar um produto ao carrinho
-// cart.js
-function addToCart(productId, productName, productPrice, quantity) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const existingProductIndex = cart.findIndex(item => item.productId === productId);
-    
-    if (existingProductIndex !== -1) {
-        cart[existingProductIndex].quantity += quantity;
-    } else {
-        cart.push({ productId, productName, productPrice, quantity });
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
-
-export { addToCart };
-
-
 // Função para renderizar o carrinho na página
 function renderCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || []; // Recupera o carrinho
@@ -75,5 +56,4 @@ function renderCart() {
     });
 }
 
-// Exportando funções para usá-las em outras partes do código
-export { addToCart, renderCart };
+export { renderCart }
